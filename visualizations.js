@@ -30,7 +30,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/02a",
     "lecture": "Lecture 02",
     "lectureTitle": "Riemann–Stieltjes integration",
-    "title": "Stieltjes Boxes",
+    "title": "Riemann-Stieltjes Boxes",
     "featured": true
   },
   {
@@ -38,7 +38,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/02b",
     "lecture": "Lecture 02",
     "lectureTitle": "Riemann–Stieltjes integration",
-    "title": "Three Meanings of the Integrator",
+    "title": "Integrators as Weights",
     "featured": true
   },
   {
@@ -46,7 +46,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/02c",
     "lecture": "Lecture 02",
     "lectureTitle": "Riemann–Stieltjes integration",
-    "title": "Bounds Under Refinement",
+    "title": "Refining Partitions",
     "featured": true
   },
   {
@@ -54,7 +54,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/03a",
     "lecture": "Lecture 03",
     "lectureTitle": "Cauchy criterion",
-    "title": "Making the Gap Small",
+    "title": "The Cauchy Criterion",
     "featured": true
   },
   {
@@ -63,7 +63,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "lecture": "Lecture 03",
     "lectureTitle": "Cauchy criterion",
     "title": "The Dirichlet Gap Under Refinement",
-    "featured": true
+    "featured": false
   },
   {
     "id": "03C",
@@ -71,7 +71,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "lecture": "Lecture 03",
     "lectureTitle": "Cauchy criterion",
     "title": "Equal-α Partitions",
-    "featured": true
+    "featured": false
   },
   {
     "id": "04A",
@@ -87,7 +87,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "lecture": "Lecture 04",
     "lectureTitle": "Integrability theorems",
     "title": "A Composition Counterexample",
-    "featured": true
+    "featured": false
   },
   {
     "id": "04C",
@@ -95,7 +95,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "lecture": "Lecture 04",
     "lectureTitle": "Integrability theorems",
     "title": "Tall Boxes and Short Boxes",
-    "featured": true
+    "featured": false
   },
   {
     "id": "05A",
@@ -111,7 +111,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "lecture": "Lecture 05",
     "lectureTitle": "Fundamental Theorem of Calculus",
     "title": "From F′ Back to F",
-    "featured": true
+    "featured": false
   },
   {
     "id": "05C",
@@ -120,7 +120,79 @@ globalThis.MATH132_VISUALIZATIONS = [
     "lectureTitle": "Fundamental Theorem of Calculus",
     "title": "Stieltjes Change of Variables",
     "featured": true
-  }
+  },
+{
+  "id": "06A",
+  "href": "/06a",
+  "lecture": "Lecture 06",
+  "lectureTitle": "Sequences of Functions",
+  "title": "One N for Every x?",
+  "featured": false
+},
+{
+  "id": "06B",
+  "href": "/06b",
+  "lecture": "Lecture 06",
+  "lectureTitle": "Sequences of Functions",
+  "title": "The Escaping-Spike Laboratory",
+  "featured": false
+},
+{
+  "id": "06C",
+  "href": "/06c",
+  "lecture": "Lecture 06",
+  "lectureTitle": "Sequences of Functions",
+  "title": "The Three-ε Continuity Bridge",
+  "featured": false
+},
+{
+  "id": "07A",
+  "href": "/07a",
+  "lecture": "Lecture 07",
+  "lectureTitle": "Uniform Convergence",
+  "title": "Weierstrass Tail Versus Roughness",
+  "featured": false
+},
+{
+  "id": "07B",
+  "href": "/07b",
+  "lecture": "Lecture 07",
+  "lectureTitle": "Uniform Convergence",
+  "title": "Building a Space-Filling Curve",
+  "featured": true
+},
+{
+  "id": "07C",
+  "href": "/07c",
+  "lecture": "Lecture 07",
+  "lectureTitle": "Uniform Convergence",
+  "title": "Sup Distance Versus L² Distance",
+  "featured": false
+},
+{
+  "id": "08A",
+  "href": "/08a",
+  "lecture": "Lecture 08",
+  "lectureTitle": "Limits, Integrals, and Derivatives",
+  "title": "When May Limit and Integral Switch?",
+  "featured": false
+},
+{
+  "id": "08B",
+  "href": "/08b",
+  "lecture": "Lecture 08",
+  "lectureTitle": "Limits, Integrals, and Derivatives",
+  "title": "Uniform Limits of Derivatives",
+  "featured": false
+},
+{
+  "id": "08C",
+  "href": "/08c",
+  "lecture": "Lecture 08",
+  "lectureTitle": "Equicontinuity",
+  "title": "Equicontinuity",
+  "featured": false
+}
 ];
 
 // Shared GitHub-page behavior. Everything below uses the list above.

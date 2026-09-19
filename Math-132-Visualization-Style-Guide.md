@@ -8,25 +8,28 @@ The visualization order and navigation labels live in `app/visualization-catalog
 
 The visualizations are working surfaces. On a representative iPhone portrait screen and on an ordinary laptop or desktop screen, the primary controls and the complete active plot must be visible in the same first screenful, including its axes, essential labels, and legend. A student must not have to scroll from the controls to see their effect.
 
+## Builder preflight
+
+Before designing or editing anything, read the current Math 132 Visualization Style Guide in full and read the relevant lecture notes. Summarize the applicable requirements. Require every agent to follow them, and have the primary agent verify compliance before publishing.
+
 ## 1. Standard page anatomy
 
 Use this sequence unless the mathematics gives a strong reason to omit a section:
 
 1. Course header with a stable visualization ID and Previous · Home · Next navigation.
-2. Playful eyebrow naming the visualization.
+2. One playful eyebrow above the title: the visualization name, followed by “· Interactive Lab”.
 3. One genuine mathematical question as the main title.
 4. A short connected explanation and the central formula or object.
-5. The eyebrow “Interactive Laboratory.”
-6. Controls, theorem status, and the primary visualization.
-7. One or two readout cards explaining what the interaction measures.
-8. An “A Key Idea” section with a summary blurb of only one or two sentences. Use this exact section title, with no question mark, in every visualization and future build.
-9. The shared 05A-style “What should we remember?” panel distinguishing observation from proof.
-10. A short “Try this” sequence.
-11. Course footer.
+5. Controls, theorem status, and the primary visualization.
+6. One or two readout cards explaining what the interaction measures.
+7. An “A Key Idea” section with a summary blurb of only one or two sentences. Use this exact section title, with no question mark, in every visualization and future build.
+8. The shared 05A-style “What should we remember?” panel distinguishing observation from proof.
+9. A short “Try this” sequence.
+10. Course footer.
 
 Compress body copy before removing eyebrows or structural cues. The eyebrows are part of the series’ personality and navigation.
 
-Open with a concise question inside the laboratory. Move longer context and formulas into the explanation after it; do not duplicate the question in an oversized hero. Preserve “Interactive Laboratory” and the visualization name.
+Open with a concise question inside the laboratory. Move longer context and formulas into the explanation after it; do not duplicate the question in an oversized hero. Preserve “Interactive Lab” and the visualization name.
 
 ## 2. Voice
 
@@ -51,9 +54,11 @@ The voice should resemble the lecture notes: curious, connective, mathematically
 - Do not introduce a metaphor, nickname, story, or physical analogy merely to make a visualization sound playful. If the notes do not use it, state the mathematical relationship directly.
 - Conventional mathematical words such as “upper sum,” “tail,” “step function,” and note-authored labels such as “tall boxes” and “short boxes” are not treated as extra analogies.
 
-The standard laboratory eyebrow is:
+The standard laboratory eyebrow combines the visualization name and laboratory label on one line above the title:
 
-    Interactive Laboratory
+    Visualization Name · Interactive Lab
+
+Use the centered dot separator exactly as shown. Do not place “Interactive Lab” on a separate line below the title.
 
 ## 3. Visual language
 
@@ -78,7 +83,7 @@ Do not change these meanings from one visualization to another. Color must suppl
 
 - Questions, formulas, and major numerical objects: Georgia with Times New Roman fallback.
 - Body copy and controls: system sans serif. Keep explanatory paragraphs in the same typeface; do not switch an entire paragraph to a formula font because it contains an equation. In 01A, KaTeX uses bundled math fonts only for mathematical expressions.
-- On light backgrounds, 01A’s explanatory paragraphs, formula cards, and exploration instructions use the same `--ink` text color. A paragraph’s position does not make its content secondary; do not lighten the last paragraph. Keep the shared eyebrow accents and the contrasting text of the dark takeaway panel.
+- On light backgrounds, 01A’s explanatory paragraphs, formula cards, and exploration instructions use the same `--ink` text color, except for the semantic partial-sum highlight described below. A paragraph’s position does not make its content secondary; do not lighten the last paragraph. Keep the shared eyebrow accents and the contrasting text of the dark takeaway panel.
 - Coordinates, parameters, and readouts: system monospace.
 - Prose-only eyebrows: small, heavy, uppercase, widely tracked. Mathematical labels and captions preserve their authored case.
 - Main question: large serif type with the mathematical surprise in magenta when appropriate.
@@ -91,7 +96,7 @@ CSS `text-transform: uppercase` changes Greek α into capital Α, which resemble
 
 - Panel subtitles, readout labels, explanatory-card labels, formula labels, and captions containing mathematics use `text-transform: none`. Preserve the case of the complete expression, including subscripts.
 - Examples: `each interval has equal Δα`, `α(xᵢ) = i/n`, `α flat · zero weight`, and `Each α-weight` must retain lowercase α.
-- Reserve uppercase styling for prose-only eyebrows such as “Interactive Laboratory” and “What should we remember?”. If an uppercase prose eyebrow needs an inline formula, wrap the complete expression in `<span className="math">…</span>` (or `<tspan className="math">…</tspan>` inside SVG text). The `.math` class preserves case for the expression and its descendants.
+- Reserve uppercase styling for prose-only eyebrows such as “Interactive Lab” and “What should we remember?”. If an uppercase prose eyebrow needs an inline formula, wrap the complete expression in `<span className="math">…</span>` (or `<tspan className="math">…</tspan>` inside SVG text). The `.math` class preserves case for the expression and its descendants.
 - These rules live in `app/visualization-annotations.css`, included by the shared stylesheet and by the 01C standalone builder.
 - Check the rendered captions in every preset that changes labels or reveals a warning; lowercase source text alone is not sufficient, because CSS can change its appearance.
 
@@ -131,10 +136,16 @@ Use 05A as the reference for every visualization. Render `<Takeaway>…</Takeawa
 
 - One dark ink panel (`--ink`, #14283a), with a 22px corner radius, 22px padding, and 18px space above it.
 - One text column. Do not add a circular exclamation mark, a large serif heading, a separate card treatment, or a different layout on individual pages.
-- First line: the pink eyebrow “What should we remember?” in the shared uppercase, tracked style (0.72rem, weight 850, tracking 0.17em).
+- First line: the light pink eyebrow “What should we remember?” in the shared uppercase, tracked style (0.72rem, weight 850, tracking 0.17em). On the dark ink panel, use `--magenta-soft` (#f4c3d7), not the darker `--magenta-text`, so the title remains clearly readable.
 - Then one concise paragraph in system sans serif, 16px with line-height 1.65, color #bdc6cd, and maximum text width 800px. Keep its margin at zero, as in 05A. Fold any former display heading into the opening sentence and preserve the mathematical qualifications.
 - Keep this same padding, typography, and single-column layout on phones; allow the paragraph to wrap naturally. The panel height follows its content.
 - Place it at the end of “A Key Idea”, before “Try this”. State the main conclusion and distinguish what the visualization suggests from what the argument proves when that distinction matters.
+
+### “Try this” template
+
+- Use the same two-column `experiment` section on every visualization: a “Try this” eyebrow and question-led heading on the left, with a numbered list on the right.
+- Give exactly three short prompts. Each should ask the student to perform a specific action with the controls and notice, compare, or explain a mathematical consequence.
+- Keep distinct ideas in distinct numbered prompts rather than combining the whole exploration into one paragraph.
 
 ### Navbar template
 
@@ -150,12 +161,14 @@ Every routed page and every standalone file uses the same navbar structure:
 
 ### Home-page catalog
 
-- Show featured demos in the main collection. Keep unfeatured demos at their existing URLs and list them afterward under **Unfinished Demos**, with the exact text **Feel free to explore but use at your own risk.** Hide this section if there are no unfeatured demos.
+- Show only featured demos on `index.html`. Keep unfeatured demos at their existing URLs, and preserve a small link near the top of the home page to `all.html`, which lists every visualization—featured and unfeatured—in catalog order. Present `all.html` as the white-background **Sandbox**, with the brief note “Some of these are under construction.”
 - Initial selection: all demos featured except 01B. Future requests change only the corresponding flags in the authoritative list.
 
 - Treat the home page as an index, not as a second explanation of every visualization.
 - Use compact, approximately square tiles: normally 172–200px wide and no more than about 200px tall on a computer screen.
 - Each tile shows only three primary elements: a small mathematical preview, the visualization ID, and its short title.
+- Store every card and its preview permanently in the home-page `cards` collection in `app/page.tsx`, independently of whether the visualization is featured. Changing `featured` changes whether the intact card appears on `index.html`; `all.html` continues to show it in catalog order. It must not delete the visualization page, card definition, or preview. This allows a visualization to be featured again simply by restoring its flag.
+- Make each preview a miniature of the visualization’s actual mathematical experiment, not a generic icon or a lone one-color curve. Use the shared pale plotting surface and combine the established ink with two or more meaningful palette accents when the mathematics supports them—for example a comparison curve, error band, shaded region, draggable marker, partition, or bound. Preserve the collection’s color meanings, supplement color with line style or symbols, and keep the picture legible at 172–200px without depending on small text.
 - Make the whole tile a single accessible link. Keep the longer question, explanation, and controls on the visualization page itself.
 - Use an auto-fitting grid so six or more tiles can appear across an ordinary wide computer screen and two can appear across a representative iPhone screen.
 - Preserve a one-column layout near 320px when two readable tiles no longer fit.
@@ -188,6 +201,7 @@ For 01C in particular, preserve:
 - Announce dynamic theorem status and important resolution notices.
 - Give every dynamic SVG an accessible name, title, and description.
 - Provide keyboard equivalents for pointer interactions.
+- When a slider controls the position, size, or value of a visible object, make that object directly draggable when the gesture is natural and convenient. Keep the labeled slider as the keyboard-accessible equivalent, and make the draggable affordance visible in the diagram or legend.
 - Keep a visible magenta focus outline.
 - Make touch targets at least 44px high where practical.
 - Use line style or symbols as well as color in plot legends.
@@ -202,7 +216,8 @@ For a graph that pans or zooms, its keyboard instructions should be present in t
 - Check both the initial state and states that reveal additional controls, change labels, or display a warning. A height limit must never crop a plot, remove a required card, or hide a numerical warning.
 - The **complete active plot and its primary controls** must fit together: merely intersecting the viewport or showing the first strip of a graph does not pass. Include axes, essential labels, and the legend; keep important readouts near the plot.
 - Use a control column beside the visualization on a computer or landscape tablet. On a phone, use a small two-column control grid immediately above the plot.
-- Fit the content by simplifying its structure, not by shrinking controls and labels to tiny text. Use 16px body text, normally 14px control labels, 12px only for secondary annotations, and 44px touch targets.
+- Use 16px body text, normally 14px control labels, 12px only for secondary annotations, and 44px touch targets.
+- Diagrams should try to fill the vertical space available, subject to the other constraints in this guide.
 - Prefer a labeled selector over long banks of preset buttons. When many similar objects are adjustable (for example three masses), select the object and reuse a location/weight control pair.
 - If linked plots cannot fit use clearly labeled plot buttons within the same laboratory; retain shared controls. Do not require a long scroll or an undiscoverable sideways swipe to see the other plot.
 - Selecting a control that affects another plot should reveal that plot on small screens. Optional controls must also remain next to the view they change; 01C replaces its primary control group with the expanded parameter controls on a phone.
@@ -212,9 +227,9 @@ For a graph that pans or zooms, its keyboard instructions should be present in t
 
 ### One laboratory per visualization
 
-01A keeps the editable boundary and heated plate as its single experiment. Title the first card “Heated edge · Prescribe f”. Title the plate “Temperature on the plate u_N” for the full sum (without a center dot) or “Temperature term a_i v_i” for an individual contribution, using the selected indices as subscripts. Both cards stay visible at every width; on narrow screens stack compact drawings. When side by side, use the same drawing height and y coordinates so the endpoints of [−1,1] align exactly. Both diagrams use Georgia for axis labels and tick labels at the same rendered size. Omit the sampled-maximum readout.
+01A keeps the editable boundary and heated plate as its single experiment. Title the first card “Heated edge · Prescribe f”. Title the plate “Heat equation yields plate temp u_N” for the full sum or “Heat equation yields plate temp a_n v_n” for an individual contribution, using the selected indices as subscripts. Both cards stay visible at every width; on narrow screens stack compact drawings. When side by side, use the same drawing height and y coordinates so the endpoints of [−1,1] align exactly. Both diagrams use Georgia for axis labels and tick labels at the same rendered size. Omit the sampled-maximum readout.
 
-For 01A, N is the highest term index, with 0 ≤ N ≤ 8: u_N = ∑_{n=0}^{N} a_n v_n, and S_N is its heated-edge trace. A single stepped “Show on the plate” slider has ticks u_N, a₀v₀, …, a₈v₈. Only u_N and terms through a_Nv_N are selectable; later ticks and the unused track stay visible in gray. Decreasing N clamps a selected higher term to a_Nv_N. Do not add a separate term menu. Keep a fixed color scale across individual contributions.
+For 01A, N is the highest term index, with 0 ≤ N ≤ 8: u_N = ∑_{n=0}^{N} a_n v_n, and S_N is its heated-edge trace. A single stepped “Show on the plate” slider has ticks u_N, a₀v₀, …, a₈v₈. Show an equals sign between u_N and a₀v₀, and plus signs before active terms a₁v₁ through a_Nv_N, so the enabled labels read as a sum. Keep operators between the ticks without shifting the tick labels. Only u_N and terms through a_Nv_N are selectable; later ticks and the unused track stay visible in gray, with no plus signs before disabled terms. Decreasing N clamps a selected higher term to a_Nv_N. Do not add a separate term menu. Keep a fixed color scale across individual contributions. On the plate, label the left edge “edge heated by” followed by S_N(y) in the dashed curve’s green when showing the full sum, or a_n cos(λ_n y) when showing one contribution; use the selected indices and update the accessible description too. Keep the entire “edge heated by …” label on one line, separate from the top/bottom boundary annotation, with no background box.
 
 The physical plate is the infinite strip x ≥ 0, −1 ≤ y ≤ 1, with cold top and bottom edges and decay as x → ∞. Use X_n(x) = exp(−λ_n x), where λ_n = (2n+1)π/2. Show the first two units as a viewing window, with an open right side, continuation marks, and an infinity direction label. Never draw a right boundary, label the viewing extent as a plate length L, or replace the exponential with a finite-plate sinh solution. State that each v_n(x,y) = X_n(x) cos(λ_n y) solves Laplace’s equation. The explanation connects separated factors, boundary conditions, finite linearity, cosine orthogonality, and the question of interchanging an infinite sum with an integral.
 
@@ -228,9 +243,13 @@ Use a shared HTML label layer over SVG and canvas plots so that both diagrams us
 
 ### Paragraphs and displayed equations in 01A
 
-Place the definitions above the “Boundary” dropdown in the control column beside the diagrams. Keep the full text visible at every width; do not collapse it into a “Definitions” disclosure on smaller screens. Start “The partial sum”, display S_N(y) = ∑_{n=0}^{N} a_n cos(λ_n y), then continue “approximates f(y), where…” with λ_n, the coefficient integral, and the formula for each mode v_n inline. State that each mode solves Laplace’s equation, then ask “Does”, display u_N(x,y) = ∑_{n=0}^{N} a_n v_n(x,y), and finish “also solve it?” On phones the definitions precede the controls, so readers can scroll past the introduction to see the controls and complete plots together.
+Use “Can an infinite sum solve the heat equation u_xx + u_yy = 0?” as the laboratory title, with the equation typeset by KaTeX. Do not repeat that equation in the opening blurb. Place the definitions above the “Boundary” dropdown in the control column beside the diagrams, visible at every width. Set this opening explanation apart with the same warm cream background as the plate (#f7f3e7), a subtle border (var(--line)), rounded corners, and comfortable padding; preserve the normal text color and green partial-sum highlights. Keep the complete controls and diagrams together at the laptop target size. Open with the physical description: the plate shown has top/bottom temperatures held at zero and its left edge heated by an even function f(y). Keep the strip coordinates in “Solutions on the plate.” Display S_N(y) = ∑_{n=0}^{N} a_n cos(λ_n y), say it approximates f(y), and refer to λ_n and a_n as defined below. Define λ_n = (2n+1)π/2 and a_n = ∫_{−1}^{1} f(y) cos(λ_n y) dy in the visible coefficient note under “A Key Idea”; do not hide these definitions in a disclosure. Start a new paragraph before the left-edge cosine explanation. A left-edge cosine cos(λ_n y) corresponds to v_n(x,y) = exp(−λ_n x) cos(λ_n y) on the plate. Display u_N(x,y) = ∑_{n=0}^{N} a_n v_n(x,y), state that it solves Laplace’s equation with left-edge temperature S_N(y), then ask whether the infinite sum u(x,y) = ∑_{n=0}^{∞} a_n v_n(x,y) solves the heat equation with left-edge temperature f(y). Reserve u_N for finite sums. On laptops, arrange the Boundary selector and highest-index slider side by side below the definitions to keep both controls with the complete diagrams. On phones, readers can scroll past the introduction to see the controls and complete plots together.
 
-Keep “A Key Idea” to a one- or two-sentence summary of cosine orthogonality, finite linearity, and the need for a convergence theorem. Put the brief boundary-condition explanation in a collapsed “Solutions on the plate” note. State u_N(0,y) = S_N(y) there without repeating the definitions already above the controls. Avoid vague layout references such as “the first card”; state the mathematical point directly or name the section.
+Color every partial-sum symbol S_N (including S_N(y) and selected numerical indices) and the words “partial sum” in the dashed curve’s teal-green #008b89. Keep the rest of each equation in its normal text color. In the heated-edge legend use S_N(y). Preserve matching plot-header heights so longer temperature titles do not misalign the vertical intervals.
+
+Keep “A Key Idea” to one or two sentences connecting the heat problem to term-by-term integration of the boundary series and coefficient recovery by cosine orthogonality. State visibly that all integrals in the explanation boxes are over [−1,1] and that displayed coefficients are computed numerically. Put the brief boundary-condition explanation in a collapsed “Solutions on the plate” note. State u_N(0,y) = S_N(y) there without repeating the definitions already above the controls. Distinguish the uniform-convergence estimate for integration from the separate justification needed to differentiate the infinite temperature series when verifying Laplace’s equation. Keep that distinction in the takeaway. Avoid vague layout references such as “the first card”; state the mathematical point directly or name the section.
+
+The temperature legend labels the plotted temperature, not approximation error: use “below zero” at the cool end of the full-sum scale. The plate selector displays a sum or an individual contribution; it does not add or remove terms. Exploration prompts should ask what pattern each term contributes and how quickly it decays as x increases.
 
 Keep explanatory text in one consistent-width column with no first-line indentation. Use cos(λ_n y) directly; do not introduce φ_n as an extra abbreviation. Describe v_n as a basic solution of Laplace’s equation, and a_n v_n as its contribution to u_N. Use “Highest index N” for the slider; when introducing a “mode,” give its formula and explain that it solves Laplace’s equation. Center displayed equations without an indent, and preserve the requested paragraph and display choices. Do not style the final paragraph as a narrower or lighter aside.
 
