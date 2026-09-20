@@ -62,7 +62,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/03b",
     "lecture": "Lecture 03",
     "lectureTitle": "Cauchy criterion",
-    "title": "The Dirichlet Gap Under Refinement",
+    "title": "Dirichlet f on Every Interval",
     "featured": false
   },
   {
@@ -70,7 +70,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/03c",
     "lecture": "Lecture 03",
     "lectureTitle": "Cauchy criterion",
-    "title": "Equal-α Partitions",
+    "title": "Equal Weight, Unequal Width",
     "featured": false
   },
   {
@@ -78,7 +78,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/04a",
     "lecture": "Lecture 04",
     "lectureTitle": "Integrability theorems",
-    "title": "Isolating Finitely Many Discontinuities",
+    "title": "Finitely Many Discontinuities",
     "featured": true
   },
   {
@@ -94,7 +94,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/04c",
     "lecture": "Lecture 04",
     "lectureTitle": "Integrability theorems",
-    "title": "Tall Boxes and Short Boxes",
+    "title": "Tall and Short Boxes",
     "featured": false
   },
   {
@@ -118,7 +118,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/05c",
     "lecture": "Lecture 05",
     "lectureTitle": "Fundamental Theorem of Calculus",
-    "title": "Stieltjes Change of Variables",
+    "title": "Riemann-Stieltjes Change of Variables",
     "featured": true
   },
 {
