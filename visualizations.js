@@ -30,7 +30,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/02a",
     "lecture": "Lecture 02",
     "lectureTitle": "Riemann–Stieltjes integration",
-    "title": "Riemann-Stieltjes Boxes",
+    "title": "The Riemann-Stieltjes Integral",
     "featured": true
   },
   {
