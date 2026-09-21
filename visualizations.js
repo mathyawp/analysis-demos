@@ -130,6 +130,14 @@ globalThis.MATH132_VISUALIZATIONS = [
   "featured": false
 },
 {
+  "id": "06D",
+  "href": "/06d",
+  "lecture": "Lecture 06",
+  "lectureTitle": "Sequences of Functions",
+  "title": "One N for Every x?",
+  "featured": false
+},
+{
   "id": "06B",
   "href": "/06b",
   "lecture": "Lecture 06",
@@ -142,8 +150,8 @@ globalThis.MATH132_VISUALIZATIONS = [
   "href": "/06c",
   "lecture": "Lecture 06",
   "lectureTitle": "Sequences of Functions",
-  "title": "The Three-ε Continuity Bridge",
-  "featured": false
+  "title": "The ε/3 argument",
+  "featured": true
 },
 {
   "id": "07A",
