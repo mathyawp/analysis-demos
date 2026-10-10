@@ -6,7 +6,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/01a",
     "lecture": "Lecture 01",
     "lectureTitle": "Introduction",
-    "title": "Fourier’s Heated Plate",
+    "title": "Fourier\u2019s Heated Plate",
     "featured": true
   },
   {
@@ -29,7 +29,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "id": "02A",
     "href": "/02a",
     "lecture": "Lecture 02",
-    "lectureTitle": "Riemann–Stieltjes integration",
+    "lectureTitle": "Riemann\u2013Stieltjes integration",
     "title": "The Riemann-Stieltjes Integral",
     "featured": true
   },
@@ -37,7 +37,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "id": "02B",
     "href": "/02b",
     "lecture": "Lecture 02",
-    "lectureTitle": "Riemann–Stieltjes integration",
+    "lectureTitle": "Riemann\u2013Stieltjes integration",
     "title": "Integrators as Weights",
     "featured": true
   },
@@ -45,7 +45,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "id": "02C",
     "href": "/02c",
     "lecture": "Lecture 02",
-    "lectureTitle": "Riemann–Stieltjes integration",
+    "lectureTitle": "Riemann\u2013Stieltjes integration",
     "title": "Refining Partitions",
     "featured": true
   },
@@ -110,7 +110,7 @@ globalThis.MATH132_VISUALIZATIONS = [
     "href": "/05b",
     "lecture": "Lecture 05",
     "lectureTitle": "Fundamental Theorem of Calculus",
-    "title": "From F′ Back to F",
+    "title": "From F\u2032 Back to F",
     "featured": false
   },
   {
@@ -121,84 +121,180 @@ globalThis.MATH132_VISUALIZATIONS = [
     "title": "Riemann-Stieltjes Change of Variables",
     "featured": true
   },
+  {
+    "id": "06A",
+    "href": "/06a",
+    "lecture": "Lecture 06",
+    "lectureTitle": "Sequences of Functions",
+    "title": "One N for Every x?",
+    "featured": false
+  },
+  {
+    "id": "06D",
+    "href": "/06d",
+    "lecture": "Lecture 06",
+    "lectureTitle": "Sequences of Functions",
+    "title": "One N for Every x?",
+    "featured": false
+  },
+  {
+    "id": "06B",
+    "href": "/06b",
+    "lecture": "Lecture 06",
+    "lectureTitle": "Sequences of Functions",
+    "title": "The Escaping-Spike Laboratory",
+    "featured": false
+  },
+  {
+    "id": "06C",
+    "href": "/06c",
+    "lecture": "Lecture 06",
+    "lectureTitle": "Sequences of Functions",
+    "title": "The \u03b5/3 argument",
+    "featured": true
+  },
+  {
+    "id": "07A",
+    "href": "/07a",
+    "lecture": "Lecture 07",
+    "lectureTitle": "Uniform Convergence",
+    "title": "Weierstrass Tail Versus Roughness",
+    "featured": false
+  },
+  {
+    "id": "07B",
+    "href": "/07b",
+    "lecture": "Lecture 07",
+    "lectureTitle": "Uniform Convergence",
+    "title": "Building a Space-Filling Curve",
+    "featured": true
+  },
+  {
+    "id": "07C",
+    "href": "/07c",
+    "lecture": "Lecture 07",
+    "lectureTitle": "Uniform Convergence",
+    "title": "Sup Distance Versus L\u00b2 Distance",
+    "featured": false
+  },
+  {
+    "id": "08A",
+    "href": "/08a",
+    "lecture": "Lecture 08",
+    "lectureTitle": "Limits, Integrals, and Derivatives",
+    "title": "When May Limit and Integral Switch?",
+    "featured": false
+  },
+  {
+    "id": "08B",
+    "href": "/08b",
+    "lecture": "Lecture 08",
+    "lectureTitle": "Limits, Integrals, and Derivatives",
+    "title": "Uniform Limits of Derivatives",
+    "featured": false
+  },
+  {
+    "id": "08C",
+    "href": "/08c",
+    "lecture": "Lecture 08",
+    "lectureTitle": "Equicontinuity",
+    "title": "Equicontinuity",
+    "featured": true
+  },
+  {
+    "id": "09A",
+    "href": "/09a",
+    "lecture": "Lecture 09",
+    "lectureTitle": "Equicontinuity",
+    "title": "Pointwise Bounds",
+    "featured": false
+  },
+  {
+    "id": "09B",
+    "href": "/09b",
+    "lecture": "Lecture 09",
+    "lectureTitle": "Equicontinuity",
+    "title": "Finite Head, Uniform Tail",
+    "featured": false
+  },
+  {
+    "id": "09C",
+    "href": "/09c",
+    "lecture": "Lecture 09",
+    "lectureTitle": "Equicontinuity",
+    "title": "Pointwise to Uniform Bounds",
+    "featured": false
+  },
+  {
+    "id": "10A",
+    "href": "/10a",
+    "lecture": "Lecture 10",
+    "lectureTitle": "Arzela\u2013Ascoli Theorem",
+    "title": "The Countable Selection Lemma",
+    "featured": true
+  },
+  {
+    "id": "10B",
+    "href": "/10b",
+    "lecture": "Lecture 10",
+    "lectureTitle": "Arzela\u2013Ascoli Theorem",
+    "title": "The Arzela-Ascoli Theorem",
+    "featured": true
+  },
+  {
+    "id": "10C",
+    "href": "/10c",
+    "lecture": "Lecture 10",
+    "lectureTitle": "Arzela\u2013Ascoli Theorem",
+    "title": "Compactness in C(K)",
+    "featured": false
+  },
 {
-  "id": "06A",
-  "href": "/06a",
-  "lecture": "Lecture 06",
-  "lectureTitle": "Sequences of Functions",
-  "title": "One N for Every x?",
+  "id": "11A",
+  "href": "/11a",
+  "lecture": "Lecture 11",
+  "lectureTitle": "Uniform Approximation",
+  "title": "Picard Iteration",
   "featured": false
 },
 {
-  "id": "06D",
-  "href": "/06d",
-  "lecture": "Lecture 06",
-  "lectureTitle": "Sequences of Functions",
-  "title": "One N for Every x?",
-  "featured": false
-},
-{
-  "id": "06B",
-  "href": "/06b",
-  "lecture": "Lecture 06",
-  "lectureTitle": "Sequences of Functions",
-  "title": "The Escaping-Spike Laboratory",
-  "featured": false
-},
-{
-  "id": "06C",
-  "href": "/06c",
-  "lecture": "Lecture 06",
-  "lectureTitle": "Sequences of Functions",
-  "title": "The ε/3 argument",
+  "id": "11B",
+  "href": "/11b",
+  "lecture": "Lecture 11",
+  "lectureTitle": "Uniform Approximation",
+  "title": "Bernstein Polynomials",
   "featured": true
 },
 {
-  "id": "07A",
-  "href": "/07a",
-  "lecture": "Lecture 07",
-  "lectureTitle": "Uniform Convergence",
-  "title": "Weierstrass Tail Versus Roughness",
+  "id": "11C",
+  "href": "/11c",
+  "lecture": "Lecture 11",
+  "lectureTitle": "Uniform Approximation",
+  "title": "Stone-Weierstrass Hypotheses",
   "featured": false
 },
 {
-  "id": "07B",
-  "href": "/07b",
-  "lecture": "Lecture 07",
-  "lectureTitle": "Uniform Convergence",
-  "title": "Building a Space-Filling Curve",
-  "featured": true
-},
-{
-  "id": "07C",
-  "href": "/07c",
-  "lecture": "Lecture 07",
-  "lectureTitle": "Uniform Convergence",
-  "title": "Sup Distance Versus L² Distance",
+  "id": "12A",
+  "href": "/12a",
+  "lecture": "Lecture 12",
+  "lectureTitle": "Power Series",
+  "title": "Radius of Convergence",
   "featured": false
 },
 {
-  "id": "08A",
-  "href": "/08a",
-  "lecture": "Lecture 08",
-  "lectureTitle": "Limits, Integrals, and Derivatives",
-  "title": "When May Limit and Integral Switch?",
+  "id": "12B",
+  "href": "/12b",
+  "lecture": "Lecture 12",
+  "lectureTitle": "Power Series",
+  "title": "Endpoint Behavior",
   "featured": false
 },
 {
-  "id": "08B",
-  "href": "/08b",
-  "lecture": "Lecture 08",
-  "lectureTitle": "Limits, Integrals, and Derivatives",
-  "title": "Uniform Limits of Derivatives",
-  "featured": false
-},
-{
-  "id": "08C",
-  "href": "/08c",
-  "lecture": "Lecture 08",
-  "lectureTitle": "Equicontinuity",
-  "title": "Equicontinuity",
+  "id": "12C",
+  "href": "/12c",
+  "lecture": "Lecture 12",
+  "lectureTitle": "Power Series",
+  "title": "Inside the Radius",
   "featured": false
 }
 ];
